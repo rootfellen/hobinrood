@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-grow: 1;
+  height: 100vh;
+}
+
+// HERO SECTION
+.mainSection {
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  flex-grow: 1;
+  &.dark-mode { //Dark Mode enabled
+    background-color: #2A2C2E;
+  }
+}

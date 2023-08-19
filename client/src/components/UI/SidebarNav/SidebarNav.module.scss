@@ -1,0 +1,89 @@
+@use "../../../styles//mixins.scss";
+@use "../../../styles//variables.scss";
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: variables.$secondary-color;
+  // @include mixins.flexbox($display: flex, $alignItems: center, $gap: 2.5rem);
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  &.dark-mode {
+    color: #fff;
+  }
+}
+
+.divider {
+  width: 200px;
+  height: 1px;
+  background-color: variables.$secondary-color;
+  opacity: 0.45;
+  &.dark-mode {
+    background-color: #fff;
+  }
+}
+
+.listItem {
+  font-size: 1.2rem;
+  color: variables.$secondary-color;
+  margin: 1rem 0rem;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  // @include mixins.flexbox($display: flex, $gap: 1rem);
+  display: flex;
+  gap: 1rem;
+
+  img {
+    max-width: 1rem;
+  }
+
+  &:hover {
+    background-color: #fff;
+    border-radius: 25px;
+  }
+  &.dark-mode {
+    color: #fff;
+  }
+  &.dark-mode:hover {
+    background-color: #333636;
+    color: #fff;
+  }
+}
+.dark-mode-img {
+    //Modifies the credit/bank icon colors on hover
+    filter: invert(1) contrast(200%) //hue-rotate(100deg)
+      saturate(0);
+}
+
+.active {
+  background-color: #fff;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  color: variables.$secondary-color;
+  margin: 1rem 0rem;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  // @include mixins.flexbox($display: flex, $gap: 1rem);
+  display: flex;
+  gap: 1rem;
+
+  &.dark-mode {
+    background-color: #2A2C2E;
+    color: #fff;
+  }
+}
+.supportList {
+  a {
+    &:last-child {
+      .listItem {
+        &:last-child {
+          font-weight: variables.$font-bold;
+        }
+      }
+    }
+  }
+}

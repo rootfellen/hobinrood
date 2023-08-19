@@ -1,0 +1,42 @@
+@use "../../../styles/variables.scss";
+@use "../../../styles/mixins.scss";
+.container {
+  background-color: variables.$secondary-color;
+  max-width: 325px;
+  width: 100%;
+  border-radius: 25px;
+  color: #fff;
+  padding: 22px 37px;
+  .amount {
+    position: relative;
+    font-weight: variables.$font-bold;
+    font-size: 24px;
+    margin: 20px 0;
+    &::after {
+      content: "USD";
+      padding-left: 0.5rem;
+      font-size: 18px;
+      font-weight: variables.$font-regular;
+    }
+  }
+  .results {
+    margin-top: 1rem;
+    font-size: 18px;
+    img {
+      max-width: 3rem;
+      margin-right: 1rem;
+    }
+    span {
+      margin-left: 0.5rem;
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+  &.dark-mode {
+    background-color: #0b1615;
+  }
+}
+
+.title {
+  font-size: 1.125rem;
+}
